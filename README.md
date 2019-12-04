@@ -1,5 +1,11 @@
 # 三代单传大锅
 
+| [项目进展](https://github.com/bobby285271/SoCoding2019-forum/projects/1) | [发布版本](https://github.com/bobby285271/SoCoding2019-forum/releases) | [问题反馈](https://github.com/bobby285271/SoCoding2019-forum/issues) | [参与其中](https://github.com/bobby285271/SoCoding2019-forum/pulls) |
+|:---:|:---:|:---:|:---:|
+
+## 项目介绍
+一个简易的论坛，有用户注册与登录、查看帖子、新建帖子、修改帖子、回复帖子等功能。
+
 ## 目录结构
 ```
 ├── config/ # 项目配置文件
@@ -22,9 +28,6 @@
 ├── init.php # 项目初始化文件
 ├── README.md # 项目总览文档
 ```
-
-## 项目介绍
-一个简易的论坛，有用户注册与登录、查看帖子、新建帖子、修改帖子、回复帖子等功能。
 
 ## 维护者
 * 项目负责人：[HZY](https://github.com/Quantum-Revolution)
