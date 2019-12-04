@@ -22,7 +22,7 @@
 	├── register_deal.php # 注册数据处理
 	├── validate.php # 登录数据处理
 ├── views/ # 视图
-    ├── index.html # 主页面
+    	├── index.html # 主页面
 	├── login.html # 用户登录
 	├── register.html # 用户注册
 ├── index.php # 主页面入口
