@@ -10,12 +10,12 @@
 ```
 ├── config/ # 项目配置文件
 	├── config.php # 配置文件
-├── core/ # 
+├── core/ # 核心组件
 	├── mysqlDB.php # 数据库连接文件
 ├── model/ # 后端
 	├── login.php # 用户登录入口
-	├── register.php # 用户注册入口
 	├── validate.php # 登录数据处理
+	├── register.php # 用户注册入口
 	├── register_deal.php # 注册数据处理
 ├── assets/
 	├── css/
