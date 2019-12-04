@@ -1,6 +1,6 @@
 # 三代单传大锅 version 0.1
 
-> 盘古开天地专用分支，用于前期准备。预计 7 号前后会**将所有提交合并为一个**合并回 `master`（意味着项目成员可以在这里~~瞎搞搞~~熟悉一下 `git` 的操作）。
+> 盘古开天地专用分支，用于前期准备。预计 4 号前后会**将所有提交合并为一个**合并回 `master`（意味着项目成员可以在这里~~瞎搞搞~~熟悉一下 `git` 的操作）。
 
 > Changeset 和 Schedule 丢 [Projects 专区](https://github.com/bobby285271/SoCoding2019-forum/projects/1) 了。项目组成员可前往对版本目标和进展进行确认。
 
@@ -39,7 +39,5 @@
 ## 维护者
 
 * 项目负责人：[HZY](https://github.com/Quantum-Revolution)
-* 前端（2 人）：
-* 后端（3 人）：
-* 未分类：[RJL](https://github.com/bobby285271)、[WMY](https://github.com/greatmove)、[HYH](https://github.com/Meta-phy)、[HZY](https://github.com/Quantum-Revolution)、[FWJ](https://github.com/Feng-Wenjun)
-#QAQ----metaphy
+* 前端（2 人）：[WMY](https://github.com/greatmove)、[FWJ](https://github.com/Feng-Wenjun)
+* 后端（3 人）：[RJL](https://github.com/bobby285271)、[HYH](https://github.com/Meta-phy)、[HZY](https://github.com/Quantum-Revolution)
