@@ -21,3 +21,16 @@ else if ( $user_password1 !== $user_password2 ) {
 else if ( strlen($user_password1) < 6  ) {
 	jump('./register.php', '密码长度不符要求');
 }
+else {
+	//用 MD5 加密用户密码后写入数据库
+	$user_password = md5($user_password1);
+	$sql = "INSERT INTO user (user_name, user_password)
+		VALUES ('$user_name', '$user_password')";
+	if ( mysqli_query($conn, $sql) ) {
+		mysqli_close($conn);
+		jump('./login.php', '注册成功');
+	}
+	else {
+		jump('./register.php', '注册失败');
+	}
+}
