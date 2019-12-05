@@ -5,6 +5,9 @@ include  '../core/mysqlDB.php';
 $user_name = $_POST['user_name'];
 $user_password = $_POST['user_password'];
 
+// 设置编码，防止中文乱码
+mysqli_query($conn, "set names utf8");
+
 // 查找当前提交的用户名
 $sql = "SELECT * FROM user WHERE user_name = '$user_name'";
 $result = mysqli_query($conn, $sql);
