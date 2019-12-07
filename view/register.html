@@ -9,56 +9,30 @@
     <script src="../assets/js/jquery.js"></script>
     <!--JavaScript 插件-->
     <script src="../assets/js/bootstrap.min.js"></script>
-    <title>表单标签</title>
+    <title>注册界面</title>
 </head>
 
 <body>
-    <style>
-        body {
-            text-align: center;
-        }
 
-        fieldset {
-            background-color: #f1f1f1;
-            border: none;
-            border-radius: 2px;
-            margin-bottom: 12px;
-            overflow: hidden;
-            padding: 0 .625em;
-        }
-
-        label {
-            cursor: pointer;
-            display: inline-block;
-            padding: 3px 6px;
-            text-align: right;
-            width: 150px;
-            vertical-align: top;
-        }
-
-        input {
-            font-size: inherit;
-        }
     </style>
-    <div class="container-fluid">
-        <div class="row-fluid">
-            <div class="span12">
-                <form method="post" action="../model/register_deal.php">
-                    <fieldset>
-                        <legend>注册</legend>
-                        <label>用户名</label>
-                        <input type="text" name="user_name" />
-                        <br />
-                        <label>密码</label>
-                        <input type="password" name="user_password1" />
-                        <br />
-                        <label>确认密码</label>
-                        <input type="password" name="user_password2" />
-                        <br />
-                        <button class="btn" type="submit">提交</button>
-                    </fieldset>
-                </form>
-            </div>
+    <div class="form-horizontal">
+        <div class="control-group">
+            <form method="post" action="../model/register_deal.php">
+                <label class="control-label" for="user_name">用户名</label>
+                <div class="controls">
+                    <input type="text" name="user_name" placeholder="请输入用户名" />
+                </div>
+                <label class="control-label" for="user_password1">密码</label>
+                <div class="controls">
+                    <input type="password" name="user_password1" placeholder="请输入密码" />
+                </div>
+                <label class="control-label" for="user_password2">确认密码</label>
+                <div class="control-group">
+                    <input type="password" name="user_password2" placeholder="请确保两次密码输入一致" />
+                </div>
+                <br />
+                <button class="btn" type="submit">注册</button>
+            </form>
         </div>
     </div>
 </body>
