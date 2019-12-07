@@ -1,34 +1,66 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <!-- Bootstrap -->
-    <link href="../view/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
     <!-- jQuery-->
-    <script src="../view/jquery.js"></script>
+    <script src="../assets/js/jquery.js"></script>
     <!--JavaScript 插件-->
-    <script src="../view/bootstrap/js/bootstrap.min.js"></script>
-<title>表单标签</title>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <title>表单标签</title>
 </head>
+
 <body>
-    <div style="padding: 100px 100px 10px;">
-        <form class="bs-example bs-example-form" role="form">
-            <div class="input-group input-group-lg">
-                <span class="input-group-addon">@</span>
-                <input type="text" class="form-control" placeholder="Twitterhandle">
+    <style>
+        body {
+            text-align: center;
+        }
+
+        fieldset {
+            background-color: #f1f1f1;
+            border: none;
+            border-radius: 2px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            padding: 0 .625em;
+        }
+
+        label {
+            cursor: pointer;
+            display: inline-block;
+            padding: 3px 6px;
+            text-align: right;
+            width: 150px;
+            vertical-align: top;
+        }
+
+        input {
+            font-size: inherit;
+        }
+    </style>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <form method="post" action="../model/register_deal.php">
+                    <fieldset>
+                        <legend>注册</legend>
+                        <label>用户名</label>
+                        <input type="text" name="user_name" />
+                        <br />
+                        <label>密码</label>
+                        <input type="password" name="user_password1" />
+                        <br />
+                        <label>确认密码</label>
+                        <input type="password" name="user_password2" />
+                        <br />
+                        <button class="btn" type="submit">提交</button>
+                    </fieldset>
+                </form>
             </div>
-            <br>
-            <div class="input-group">
-                <span class="input-group-addon">@</span>
-                <input type="text" class="form-control" placeholder="Twitterhandle">
-            </div>
-            <br>
-            <div class="input-group input-group-sm">
-                <span class="input-group-addon">@</span>
-                <input type="text" class="form-control" placeholder="Twitterhandle">
-            </div>
-        </form>
+        </div>
     </div>
-</form>  
 </body>
+
 </html>
