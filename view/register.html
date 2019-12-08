@@ -16,24 +16,28 @@
 
     <div class="row justify-content-center" style="height: 500px">
         <div class="align-self-center">
-            <form method="post" action="../model/register_deal.php" >
-                <label class="control-label" for="user_name">用户名</label>
-                <div class="col-sm-10">
-                    <input class="form-control" type="text" name="user_name" placeholder="请输入用户名" />
+            <div class="col-md-12">
+                <h2 class="alert-heading">Please register in</h2>
+            </div>
+            <form class="form-horizontal" role="form" method="post" action="../model/register_deal.php">
+                <label class="sr-only" for="user_name">用户名</label>
+                <div class="col-md-12">
+                    <input class="form-control" type="text" name="user_name" placeholder="Please enter username" />
                 </div>
-                <label class="control-label" for="user_password1">密码</label>
-                <div class="col-sm-10">
-                    <input class="form-control" type="password" name="user_password1" placeholder="请输入密码" />
+                <label class="sr-only" for="user_password1">密码</label>
+                <div class="col-md-12">
+                    <input class="form-control" type="password" name="user_password1" placeholder="Please enter password" />
                 </div>
-                <label class="control-label" for="user_password2">确认密码</label>
-                <div class="col-sm-10">
-                    <input class="form-control" type="password" name="user_password2" placeholder="请确保两次输入一致" />
+                <label class="sr-only" for="user_password2">确认密码</label>
+                <div class="col-md-12">
+                    <input class="form-control" type="password" name="user_password2" placeholder="Please confirm password " />
                 </div>
                 <br />
-                <button class="btn btn-success" type="submit">注册</button>
+                <div class="col-md-12">
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Register in</button>
+                </div>
             </form>
         </div>
-    </div>
 </body>
 
 </html>
