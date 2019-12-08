@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- Bootstrap -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <!-- jQuery-->
+    <script src="../assets/js/jquery.js"></script>
+    <!--JavaScript 插件-->
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <title>登录界面</title>
+</head>
+
+<body>
+
+    <div class="row justify-content-center" style="height: 500px">
+        <div class="align-self-center">
+            <div class="col-md-12">
+                <h2 class="alert-heading">Please sign in</h2>
+            </div>
+            <form class="form-horizontal" role="form" method="post" action="../model/validate.php">
+                <label class="sr-only" for="user_name">用户名</label>
+                <div class="col-md-12">
+                    <input class="form-control" type="text" name="user_name" placeholder="Please enter username" />
+                </div>
+                <label class="sr-only" for="user_password">密码</label>
+                <div class="col-md-12">
+                    <input class="form-control" type="password" name="user_password" placeholder="Please enter password" />
+                </div>
+                <br />
+                <div class="col-md-12">
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                </div>
+            </form>
+        </div>
+</body>
+
+</html>
