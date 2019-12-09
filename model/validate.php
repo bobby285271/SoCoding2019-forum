@@ -30,9 +30,13 @@ else if ( mysqli_num_rows($result) == 0 ) {
 // 比对密码的 MD5 是否一致
 else if ( md5($user_password) === $real_password ) {
 	// TODO：保存登录状态
+	$expire=time()+60*3;//cookie的保存时间60秒*3分钟
+	setcookie("user_name", $user_name, $expire,"/");
+	//还可以set一个加密后的user_password来防止伪造cookie
+	//在登陆后用 $_COOKIE["user_name"] 来判断是否已经登录过
 	jump('../index.php', '登录成功');
 }
 else{
-	jump('./login.php', '密码失败');
+	jump('./login.php', '密码错误');
 }
 
