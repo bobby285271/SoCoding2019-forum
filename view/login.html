@@ -1,47 +1,66 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <!-- Bootstrap -->
-    <link href="../assets/css/bootstrap.css" rel="stylesheet">
-    <!-- jQuery-->
-    <script src="../assets/js/jquery.js"></script>
-    <!--JavaScript 插件-->
+    <meta charset="utf-8">
+    <title>登录 - SoCoding Forum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
-    <title>登录界面</title>
+
 </head>
 
+<!--By 容加林 20192005144-->
+
 <body>
-    <style type="text/css">
-        body {
-            padding-top: 40px;
-            padding-bottom: 40px;
-            background-color: #eee;
-        }
-    </style>
-    <div class="row justify-content-center" style="height: 500px">
-        <div class="align-self-center">
-            <div class="col-md-12">
-                <h2 class="alert-heading">Please sign in</h2>
+    <div id="headnav"></div>
+    <div class="row">
+        <div class="col-md-1 offset-md-1">
+            <div id="sidenav"></div>
+        </div>
+        <div class="col-md-9">
+            <div class="card">
+                <div class="card-header">
+                    <h4>
+                        <font color="green">用户登录</font>
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <form action="../model/validate.php" method="GET">
+                        <div class="input-group mb-3 ">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">用户账户</span>
+                            </div>
+                            <input type="text" minlength=6 class="form-control" placeholder="请输入用户名"
+                                name="user_name" required="">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">用户密码</span>
+                            </div>
+                            <input type="password" minlength=8 class="form-control" placeholder="请输入您的密码"
+                                required="" name="user_password">
+                        </div>
+
+                        <hr class="mb-4">
+
+                        <button type="submit" class="btn btn-block btn-success">
+                            <font color="white"></font>登录</font>
+                        </button>
+                    </form>
+                </div>
+
             </div>
-            <form class="form-horizontal" role="form" method="post" action="../model/validate.php">
-                <label class="sr-only" for="user_name">用户名</label>
-                <div class="col-md-12">
-                    <input class="form-control" type="text" name="user_name" placeholder="Please enter username" />
-                </div>
-                <label class="sr-only" for="user_password">密码</label>
-                <div class="col-md-12">
-                    <input class="form-control" type="password" name="user_password"
-                        placeholder="Please enter password" />
-                </div>
-                <br />
-                <div class="col-md-12">
-                    <button class="btn btn-lg btn-success btn-block btn-active" type="submit">Sign in</button>
-                </div>
-            </form>
         </div>
     </div>
+    </div>
 </body>
+
+<script>
+    $("#headnav").load("public/headnav.html");
+    $("#sidenav").load("public/sidenav.html");
+</script>
 
 </html>
