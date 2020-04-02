@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <title>注册 - SoCoding Forum</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -15,11 +15,7 @@
     <!-- 顶部导航栏 -->
     <div id="headnav"></div>
     <div class="row">
-        <!-- 侧栏 -->
-        <div class="col-md-1 offset-md-1">
-            <div id="sidenav"></div>
-        </div>
-        <div class="col-md-9">
+        <div class="col-md-8 offset-md-2">
             <div class="card">
                 <div class="card-header">
                     <h4>
@@ -27,7 +23,7 @@
                     </h4>
                 </div>
                 <div class="card-body">
-                    <form action="register_deal.php" method="GET">
+                    <form action="./controller/userAction.php" method="GET">
                         <div class="input-group mb-3 ">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">用户账户</span>
@@ -73,8 +69,7 @@
 </body>
 
 <script>
-    $("#headnav").load("../view/public/headnav.html");
-    $("#sidenav").load("../view/public/sidenav.html");
+    $("#headnav").load("./view/public/headnav.html");
 </script>
 
 </html>
