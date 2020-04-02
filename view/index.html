@@ -16,16 +16,61 @@
     <div id="headnav"></div>
     <div class="row">
         <div class="col-md-8 offset-md-2">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+
+                <!-- 指示符 -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <!-- <li data-target="#demo" data-slide-to="2"></li> -->
+                </ul>
+
+                <!-- 轮播图片 -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://news.scnu.edu.cn/media/image/2020/01/20200124324493.jpg" width=100%>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://news.scnu.edu.cn/media/image/2020/01/2020013063118f.jpg" width=100%>
+                    </div>
+                    <!-- <div class="carousel-item">
+                        <img src="#" width=100%>
+                    </div> -->
+                </div>
+
+                <!-- 左右切换按钮 -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+
+            </div>
+            <p></p>
             <div class="card">
                 <div class="card-header">
                     <h4>
-                        <font color="green">首页</font>
+                        <font color="green">全部分类</font>
                     </h4>
                 </div>
+                <!-- 板块展示 -->
                 <div class="card-body">
-
+                    <div class="list-group">
+                        <a href="posts.php" class="list-group-item list-group-item-action">
+                            <h5>C++ 技术交流</h5><small>从入门到入土到入门到入土到入门到入土到入门到入土到入门到入土到入门到入土到入门到入土到入门到入土</small>
+                        </a>
+                        <a href="posts.php" class="list-group-item list-group-item-action">
+                            <h5>Java 技术交流</h5><small>从入门到入土到入门到入土到入门到入土到入门到入土到入门到入土到入门到入土到入门到入土到入门到入土</small>
+                        </a>
+                        <a href="posts.php" class="list-group-item list-group-item-action">
+                            <h5>PHP 技术交流</h5><small>从入门到入土到入门到入土到入门到入土到入门到入土到入门到入土到入门到入土到入门到入土到入门到入土</small>
+                        </a>
+                        <a href="posts.php" class="list-group-item list-group-item-action">
+                            <h5>Python 技术交流</h5><small>从入门到入土到入门到入土到入门到入土到入门到入土到入门到入土到入门到入土到入门到入土到入门到入土</small>
+                        </a>
+                    </div>
                 </div>
-
             </div>
         </div>
     </div>

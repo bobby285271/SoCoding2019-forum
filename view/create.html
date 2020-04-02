@@ -1,3 +1,63 @@
-<?php
-// 发表帖子
-include './view/create.html';
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>发布帖子 - SoCoding Forum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <!-- 顶部导航栏 -->
+    <div id="headnav"></div>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.php">首页</a></li>
+                <li class="breadcrumb-item active"><a href="create.php">发布帖子</a></li>
+            </ol>
+            <div class="card">
+                <div class="card-header">
+                    <h4>
+                        <font color="green">发布帖子</font>
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <!-- 输入框 -->
+                    <form action="#" method="GET">
+                        <div class="input-group mb-3 input-group-lg">
+                            <input type="text" placeholder="请输入标题..." class="form-control" name="title">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <textarea class="form-control" placeholder="请输入正文..." rows="10" name="text"></textarea>
+                        </div>
+
+
+                        <div class="input-group mb-3">
+                            <select class="custom-select d-block" required="">
+                                <option value="">选择一个分类...</option>
+                                <option>C++</option>
+                                <option>Java</option>
+                                <option>PHP</option>
+                                <option>Python</option>
+                            </select>
+                            <a href="#" class="btn btn-success" role="button">发布帖子</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+<script>
+    $("#headnav").load("./view/public/headnav.html");
+</script>
+
+</html>

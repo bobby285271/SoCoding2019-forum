@@ -1,3 +1,105 @@
-<?php
-// 查看某个帖子
-include './view/view.html';
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>帖子详情 - SoCoding Forum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <!-- 顶部导航栏 -->
+    <div id="headnav"></div>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.php">首页</a></li>
+                <li class="breadcrumb-item"><a href="posts.php">看帖</a></li>
+                <li class="breadcrumb-item active"><a href="view.php">帖子详情</a></li>
+            </ol>
+            <div class="card">
+                <!-- 帖子标题 -->
+                <div class="card-header">
+                    <h4>
+                        <font color="green">帖子详情</font>
+                    </h4>
+                </div>
+                <!-- 帖子正文 -->
+                <div class="card-body">
+                    <p>Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World</p>
+                    <p>Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World</p>
+                    <p>Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World
+                        Hello World Hello World</p>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h4>
+                        <font color="green">评论</font>
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">网友 1：test</li>
+                        <li class="list-group-item">网友 2：test</li>
+                        <li class="list-group-item">网友 3：test</li>
+                    </ul>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="想不想说两句...">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">发布</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+<script>
+    $("#headnav").load("./view/public/headnav.html");
+</script>
+
+</html>
