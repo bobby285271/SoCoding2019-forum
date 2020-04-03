@@ -1,4 +1,4 @@
-# 三代单传大锅 - SoCoding Forum (Beta)
+# 三代单传大锅 - SoCoding Forum (Beta) ![Lint Checks](https://github.com/bobby285271/SoCoding2019-forum/workflows/Lint%20Checks/badge.svg)
 
 > 0.2 开发分支：随缘~~重构~~开发中，开发进展请查看 [工单页](https://github.com/bobby285271/SoCoding2019-forum/projects/1)。
 
