@@ -1,0 +1,15 @@
+name: PHP Lint
+
+on: [push, pull_request]
+
+jobs:
+
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2.1.0
+      - name: Fetch PHP lint
+        run: composer require overtrue/phplint --dev -v
+      - name: Excute PHP lint
+        run: ./vendor/bin/phplint ./ --exclude=vendor --no-cache
