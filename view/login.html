@@ -14,47 +14,47 @@
 <body>
     <!-- 顶部导航栏 -->
     <div id="headnav"></div>
-    <div class="row">
-        <div class="col-md-8 offset-md-2">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">首页</a></li>
-                <li class="breadcrumb-item active"><a href="login.php">用户登录</a></li>
-            </ol>
-            <div class="card">
-                <div class="card-header">
-                    <h4>
-                        <font color="green">用户登录</font>
-                    </h4>
-                </div>
-                <div class="card-body">
-                    <form action="./controller/loginAction.php" method="GET">
-                        <div class="input-group mb-3 ">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">用户账户</span>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.php">首页</a></li>
+                    <li class="breadcrumb-item active"><a href="login.php">用户登录</a></li>
+                </ol>
+                <div class="card">
+                    <div class="card-header">
+                        <h4>
+                            <font color="green">用户登录</font>
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="./controller/loginAction.php" method="GET">
+                            <div class="input-group mb-3 ">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">用户账户</span>
+                                </div>
+                                <input type="text" minlength=6 class="form-control" placeholder="请输入用户名"
+                                    name="user_name" required="">
                             </div>
-                            <input type="text" minlength=6 class="form-control" placeholder="请输入用户名" name="user_name"
-                                required="">
-                        </div>
 
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">用户密码</span>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">用户密码</span>
+                                </div>
+                                <input type="password" minlength=8 class="form-control" placeholder="请输入您的密码"
+                                    required="" name="user_password">
                             </div>
-                            <input type="password" minlength=8 class="form-control" placeholder="请输入您的密码" required=""
-                                name="user_password">
-                        </div>
 
-                        <hr class="mb-4">
+                            <hr class="mb-4">
 
-                        <button type="submit" class="btn btn-block btn-success">
-                            <font color="white"></font>登录</font>
-                        </button>
-                    </form>
+                            <button type="submit" class="btn btn-block btn-success">
+                                <font color="white"></font>登录</font>
+                            </button>
+                        </form>
+                    </div>
                 </div>
-
             </div>
         </div>
-    </div>
     </div>
 </body>
 
