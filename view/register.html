@@ -40,13 +40,16 @@
                                     <h2 class="text-center mb-4">
                                         <font color="green">欢迎注册</font>
                                     </h2>
-                                    <form action="./controller/loginAction.php" method="GET">
-                                        <input type="text" name="user_name" class="form-control mb-4"
-                                            placeholder="请输入帐户" required>
-                                        <input type="password" name="user_password1" class="form-control mb-4"
+                                    <form action="./controller/loginAction.php" method="POST">
+                                        <input type="text" name="account" class="form-control mb-4" placeholder="请输入帐户"
+                                            required>
+                                        <input type="text" name="nickname" class="form-control mb-4" placeholder="请输入昵称"
+                                            required>
+                                        <input type="password" name="psword" class="form-control mb-4"
                                             placeholder="请输入密码" required>
-                                        <input type="password" name="user_password2" class="form-control mb-4"
-                                            placeholder="请再次输入密码" required>
+                                        <!-- TODO：校验密码 -->
+                                        <!-- <input type="password" name="user_password2" class="form-control mb-4"
+                                            placeholder="请再次输入密码" required> -->
                                         <hr class="mb-4">
                                         <button class="btn btn-info btn-block mb-3" type="submit">注册</button>
                                     </form>

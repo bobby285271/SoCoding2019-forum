@@ -30,7 +30,7 @@
                     </div>
                     <div class="card-body">
                         <!-- 输入框 -->
-                        <form action="./controller/addAction.php" method="GET">
+                        <form action="./controller/addAction.php" method="POST">
                             <div class="input-group mb-3 input-group-lg">
                                 <input type="text" placeholder="请输入标题..." class="form-control" name="bbs_title">
                             </div>
@@ -40,13 +40,14 @@
                                     name="bbs_content"></textarea>
                             </div>
                             <div class="input-group mb-3">
-                                <select class="custom-select d-block" required="">
+                                <!-- TODO：类别 -->
+                                <!-- <select class="custom-select d-block" required="">
                                     <option value="">选择一个分类...</option>
                                     <option>C++</option>
                                     <option>Java</option>
                                     <option>PHP</option>
                                     <option>Python</option>
-                                </select>
+                                </select> -->
                                 <button class="btn btn-info mb-3" type="submit">发布</button>
                             </div>
                         </form>
