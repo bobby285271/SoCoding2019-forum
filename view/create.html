@@ -30,16 +30,15 @@
                     </div>
                     <div class="card-body">
                         <!-- 输入框 -->
-                        <form action="#" method="GET">
+                        <form action="./controller/addAction.php" method="GET">
                             <div class="input-group mb-3 input-group-lg">
-                                <input type="text" placeholder="请输入标题..." class="form-control" name="title">
+                                <input type="text" placeholder="请输入标题..." class="form-control" name="bbs_title">
                             </div>
 
                             <div class="input-group mb-3">
-                                <textarea class="form-control" placeholder="请输入正文..." rows="10" name="text"></textarea>
+                                <textarea class="form-control" placeholder="请输入正文..." rows="10"
+                                    name="bbs_content"></textarea>
                             </div>
-
-
                             <div class="input-group mb-3">
                                 <select class="custom-select d-block" required="">
                                     <option value="">选择一个分类...</option>
@@ -48,7 +47,7 @@
                                     <option>PHP</option>
                                     <option>Python</option>
                                 </select>
-                                <a href="#" class="btn btn-info" role="button">发布帖子</a>
+                                <button class="btn btn-info mb-3" type="submit">发布</button>
                             </div>
                         </form>
                     </div>
