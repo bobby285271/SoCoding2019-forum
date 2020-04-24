@@ -1,5 +1,5 @@
 ## 开发
-当前开发原则：尽量不动后端文件，前端配合后端。
+当前开发原则：尽量不动前端文件，后端配合前端。
 
 ### 发帖
 * 对应文件：`controller/addAction.php` - `view/create.html`
@@ -37,7 +37,11 @@
 * TODO：后端代码适配。
 
 ### 用户详情
-* 对应文件：`controller/userinfoAction.php` `controller/userAction.php` - `user.html`
+* 对应文件：`controller/userinfoAction.php` `controller/userAction.php` - `view/user.html`
+* 暂时搁置。
+
+### 发表评论
+* 对应文件：`controller/commentAction.php` - `view/view.html`
 * 暂时搁置。
 
 ---
