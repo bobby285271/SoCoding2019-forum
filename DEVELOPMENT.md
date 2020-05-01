@@ -28,14 +28,19 @@
 用户输入帖子标题 `bbs_title` 内容 `bbs_content`，POST 到 `addAction.php` 检验数据合理性后，连同主键 ID 一并写入数据表 `$forum_bbs`。
 
 ### 查看所有帖子
-对应文件：`controller/listAction.php` - `view/posts.html`
+对应文件：后端 `controller/listAction.php`，前端 `view/posts.html`
 
 遍历数据表 `$forum_bbs`，打印所有帖子的标题。由 `listAction.php` 负责直接打印每个帖子对应的区块，例如 `<a href="view.php?id=1111" class="list-group-item list-group-item-action">Title</a>`，其中 `1111` 是主键 ID，`Title` 是文章标题。
 
 ### 查看某一帖子和帖子的评论
-对应文件（当前）：`controller/detailsAction.php` - `view/view-head.html` `view/view-mid.html`
+对应文件（当前）：后端 `controller/detailsAction.php`，前端 `view/view-head.html` `view/view-mid.html`
 
 前端视图由多个文件组装，第一部分为帖子正文上方部分（`view-head.html`），第二部分为帖子正文下方，评论上方（`view-mid.html`），第三部分为评论下方（TODO）。部分之间插入后端模块，由 `detailsAction.php` 获取 GET 方法得到的主键 ID，并直接在屏幕打印对应帖子正文。
+
+### 删除帖子
+对应文件：后端 `controller/delAction.php`
+
+用户点击查看某一帖子页面中的删除按钮，`delAction.php` 获取帖子主键 ID，校验用户身份后删除帖子。
 
 ---
 
