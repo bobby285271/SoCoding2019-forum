@@ -73,7 +73,7 @@ if (mysqli_num_rows($result) > 0) {
     // 输出数据
     while($row = mysqli_fetch_assoc($result)) {
         // echo "id: " . $row["account"]. " <br>";
-        echo "document.write('<a href=\"view.php?title=" .$row["bbs_title"]. "\" class=\"list-group-item list-group-item-action\">" .$row["bbs_title"]. "</a>');";
+        echo "document.write('<a href=\"view.php?id=" .$row["id"]. "\" class=\"list-group-item list-group-item-action\">" .$row["bbs_title"]. "</a>');";
     }
 } else {
     echo "0 结果";
