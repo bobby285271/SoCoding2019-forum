@@ -3,7 +3,21 @@
 include 'function.php';
 
 $id = $_GET['id'];
-echo "$id";
+
+session_start();
+if(isset($_SESSION['user'])){
+	$userList	=	$_SESSION['user'];
+}else{
+	echo '<script> alert(\'未登录，请先登录！~~\');location.href=\'../login.php\';</script>';
+	exit;
+}
+
+$details = find($bbsTable,$db,'id',$id);
+
+if($_SESSION['user']['account'] != $details['account']){
+    echo '<script> alert(\'发帖的都不是你你删个毛线~~\');javascript:history.back(-1);</script>';
+    exit;
+}
 
 $sql = "DELETE FROM {$bbsTable} WHERE ((`id` = '$id'))";
 $conn = db_connect($db);
