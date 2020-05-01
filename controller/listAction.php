@@ -1,15 +1,10 @@
 <?php
-//TODO：调用数据表内容
-echo "document.write('<a href=\"view.php\" class=\"list-group-item list-group-item-action\">如何 AK IOI</a>');";
-//TODO：看懂下面写的都是啥东西
-// /**
-//  * 首页模板
-//  */
-// //1.加载公共函数库
-// include 'controller/function.php';
-// //5.设置模板名称
+
+//1.加载公共函数库
+include 'function.php';
+//5.设置模板名称
 // $tplName = 'list_tpl';
-// //2.获取当前帖子的分页数据
+//2.获取当前帖子的分页数据
 // if($_POST){
 // 	$bbsOrder = 'ORDER BY `add_time` DESC ';  //设置帖子最新排序
 // 	$bbsWhere =	'WHERE status = 1 AND bbs_title like "%'.$_POST['q'].'%"';	//搜索条件
@@ -31,7 +26,6 @@ echo "document.write('<a href=\"view.php\" class=\"list-group-item list-group-it
 // 	foreach($list as $k=>$v){
 // 		$bbsList[$k]	=	array(
 // 			'bbs_id'	=>	$v['bbs_id'],
-// 			'uid'		=>	$v['uid'],
 // 			'bbs_title'	=>	$v['bbs_title'],
 // 			'nickname'	=>	find_one($userTable,$db,'WHERE uid='.$v['uid'],'nickname'),
 // 			'head'		=>	find_one($userTable,$db,'WHERE uid='.$v['uid'],'head'),
@@ -71,6 +65,21 @@ echo "document.write('<a href=\"view.php\" class=\"list-group-item list-group-it
 // 		);
 // 	}
 // }
+
+$sql = "SELECT * FROM {$bbsTable}";
+$conn = db_connect($db);
+$result = mysqli_query($conn, $sql);
+if (mysqli_num_rows($result) > 0) {
+    // 输出数据
+    while($row = mysqli_fetch_assoc($result)) {
+        // echo "id: " . $row["account"]. " <br>";
+        echo "document.write('<a href=\"view.php?title=" .$row["bbs_title"]. "\" class=\"list-group-item list-group-item-action\">" .$row["bbs_title"]. "</a>');";
+    }
+} else {
+    echo "0 结果";
+}
+
+
 // //6.如果登录了，获取用户信息
 // session_start();
 // if(isset($_SESSION['user'])){
