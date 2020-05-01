@@ -14,7 +14,7 @@ session_start();
 if(isset($_SESSION['user'])){
 	$userList	=	$_SESSION['user'];
 }else{
-	echo '<script> alert(\'未登录，请先登录！~~\');location.href=\'/index.php?a=login\';</script>';
+	echo '<script> alert(\'未登录，请先登录！~~\');location.href=\'../login.php\';</script>';
 	exit;
 }
 
@@ -39,7 +39,7 @@ if($_POST){
 	// 添加数据
 	$id  = insert($db,$sql);
 	if($id){
-		echo '<script> alert(\'发帖成功~~\');location.href=\'/index.php\';</script>';
+		echo '<script> alert(\'发帖成功~~\');location.href=\'../index.php\';</script>';
 		exit;
 	}else{
 		echo '<script> alert(\'发帖失败，请重新尝试~~\');javascript:history.back(-1);</script>';

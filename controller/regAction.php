@@ -4,7 +4,7 @@
  */
 
 //1.加载公共函数库
-include 'controller/function.php';
+include 'function.php';
 
 //2.设置模板名称
 $tplName = 'reg_tpl';
@@ -39,17 +39,18 @@ if($_POST){
 	// 获取当前时间戳
 	$add_time = time();
 	// 创建mysql语句
-	$sql = "INSERT INTO {$userTable} VALUES (null,'{$nickname}','static/img/avatar-max-img.png','{$account}','{$psword}','{$add_time}',1,0)";
+	$sql = "INSERT INTO {$userTable} (nickname, account, psword) VALUES ('{$nickname}','{$account}','{$psword}')";
 	// 添加数据
-	$id  = insert($db,$sql);
+	$id = insert($db,$sql);
+	// echo $id;
 	// 判断数据是否增加成功
-	if($id){
+	// if($id){
 		// 获取用户信息
-		$userList = find($userTable,$db,'uid',$id);
+		$userList = find($userTable, $db, 'account', $account);
 		session_start();
 		$_SESSION['user']	=	$userList;
-		echo '<script> alert(\'注册成功~~\');location.href=\'/index.php\';</script>';
-	}else{
-		echo '<script> alert(\'注册失败，请重新尝试~~\');javascript:history.back(-1);</script>';
-	}
+		echo '<script> alert(\'注册成功~~\');location.href=\'../index.php\';</script>';
+	// }else{
+	// 	echo '<script> alert(\'注册失败，请重新尝试~~\');javascript:history.back(-1);</script>';
+	// }
 }

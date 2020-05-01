@@ -14,7 +14,7 @@ session_start();
 if(isset($_SESSION['user'])){
 	$userList	=	$_SESSION['user'];
 }else{
-	echo '<script> alert(\'未登录，请先登录！~~\');location.href=\'/index.php?a=login\';</script>';
+	echo '<script> alert(\'未登录，请先登录！~~\');location.href=\'../login.php\';</script>';
 	exit;
 }
 //4.请求用户发帖列表

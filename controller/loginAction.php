@@ -4,7 +4,7 @@
  */
 
 //1.加载公共函数库
-include 'controller/function.php';
+include 'function.php';
 
 //2.设置模板名称
 $tplName = 'login_tpl';
@@ -34,7 +34,7 @@ if($_POST){
 		}
 		session_start();
 		$_SESSION['user']	=	$userList;
-		echo '<script> alert(\'登录成功~~\');location.href=\'/index.php\';</script>';
+		echo '<script> alert(\'登录成功~~\');location.href=\'../login.php\';</script>';
 		exit;
 	}else{
 		echo '<script> alert(\'登录失败，请重新尝试~~\');javascript:history.back(-1);</script>';

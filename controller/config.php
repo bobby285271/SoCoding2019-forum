@@ -1,10 +1,5 @@
 <?php
-/**
- * 命名规范:变量采用驼峰命名法,方法采用小写字母加下划线命名法
- * 全站要求:可配置,可扩展
- * 全部url采用全动态生成,约定a代表模块,page代表分页
- * 入口地址统一为: index.php?a=模块,例如:index.php?a=list
- */
+
 header("Content-type: text/html; charset=utf-8");
 //设置中国时区
 date_default_timezone_set('PRC');
@@ -13,13 +8,13 @@ $url = 'http://www.zhibo.com/index.php';
 //设置每页显示信息数量
 $num = 10;
 //设置页面标题后缀
-define('SITE_SUFFIX','php论坛_www.php.cn');
+define('SITE_SUFFIX','SoCoding');
 
 //设置数据库连接参数
 $db = array(
-    'db_host' => '127.0.0.1',
-    'db_user' => 'root',
-    'db_pass' => 'root',
+    'db_host' => 'localhost',
+    'db_user' => 'socoding',
+    'db_pass' => 'socoding',
     'db_name' => 'forum'
 );
 
@@ -39,7 +34,7 @@ switch ($getNo)
     case 'logout':  //退出登录
         session_start();
         if (session_destroy()){
-            echo "<script>location.href='/index.php';</script>";
+            echo "<script>location.href='../index.php';</script>";
         }
         break;
     case 'user':     //个人中心
@@ -61,5 +56,5 @@ switch ($getNo)
     case 'oper':    //删除帖子、设置热门帖子
         include 'operAction.php';break;
     default:
-        echo '<script> alert(\'参数错误~~\');location.href=\'/index.php\';</script>';
+        echo '<script> alert(\'参数错误~~\');location.href=\'../index.php\';</script>';
 }
