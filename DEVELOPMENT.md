@@ -17,22 +17,15 @@
 
 ### 首页
 * 对应文件：`view/index.html`
-* 接口：？
-* TODO：无帖子分类功能。
 
 ### 顶栏
 * 对应文件：`view/public/headnav.html`
-* 接口：？
-* TODO：未建立搜索页。
 
 ### 查看所有帖子
 * 对应文件：`controller/listAction.php` - `view/posts.html`
 
-
 ### 查看某一帖子
-* 对应文件：`controller/detailsAction.php` - `view/view.html`
-* 接口：？
-* TODO：后端代码适配。
+* 对应文件：`controller/detailsAction.php` - `view/view-head.html` `view/view-foot.html`
 
 ### 用户详情
 * 对应文件：`controller/userinfoAction.php` `controller/userAction.php` - `view/user.html`

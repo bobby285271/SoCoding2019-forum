@@ -1,13 +1,13 @@
 <?php
-//TODO：调用数据表内容
-echo "document.write('<p>hello world</p>');";
-//TODO：看懂下面写的都是啥东西
+
+$id = $_GET['id'];
+
 // /**
 //  * 详情模板
 //  */
 
 // //1.加载公共函数库
-// include 'controller/function.php';
+include 'function.php';
 // //10.设置模板名称
 // $tplName = 'details_tpl';
 
@@ -23,12 +23,15 @@ echo "document.write('<p>hello world</p>');";
 // save($bbsTable,$db,$value,$where);
 
 // //4.获取帖子详情
-// $details = find($bbsTable,$db,'bbs_id',$id);
-// if(!$details){
-// 	echo '<script> alert(\'未找到详情！~~\');location.href=\'/index.php\';</script>';
-// }else{
-// 	$details['add_time']	=	date('Y-m-d H:i',$details['add_time']);
-// }
+$details = find($bbsTable,$db,'id',$id);
+echo $details['bbs_content'];
+if(!$details){
+    echo "找不到帖子";
+	// echo '<script> alert(\'未找到详情！~~\');location.href=\'/index.php\';</script>';
+}else{
+    // $details['add_time']	=	date('Y-m-d H:i',$details['add_time']);
+    echo $details['bbs_content'];
+}
 
 // //5.获取右侧发起人
 // $pUserList 	= find($userTable,$db,'uid',$details['uid']);
@@ -84,3 +87,4 @@ echo "document.write('<p>hello world</p>');";
 // 	$bbsListPage .= $p;
 // 	$bbsListPage .= '</a></li>';
 // }
+
