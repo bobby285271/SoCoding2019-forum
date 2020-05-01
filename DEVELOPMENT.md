@@ -1,10 +1,12 @@
 ## 开发
 当前开发原则：尽量不动前端文件，后端配合前端。
 
+> 0.2
+
 ### 发帖
 * 对应文件：`controller/addAction.php` - `view/create.html`
 * 接口：帖子标题 `bbs_title` 内容 `bbs_content`，使用 POST。
-* TODO：
+* TODO：DONE
 
 ### 登录
 * 对应文件：`controller/loginAction.php` - `view/login.html`
