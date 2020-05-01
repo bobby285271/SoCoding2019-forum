@@ -34,7 +34,7 @@ if($_POST){
 	// 获取当前时间戳
 	$add_time = time();
 	// 创建mysql语句
-	$sql = "INSERT INTO {$bbsTable} VALUES ('{$userList['account']}','{$bbs_title}','{$bbs_content}')";
+	$sql = "INSERT INTO {$bbsTable} VALUES (0,'{$userList['account']}','{$bbs_title}','{$bbs_content}')";
 	// 添加数据
 	$id  = insert($db,$sql);
 	// if($id){

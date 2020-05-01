@@ -49,4 +49,4 @@
 > 其它位置需要到数据表名称时使用下面给出的变量。
 
 * 用户 `{$userTable}`： 用户昵称 nickname (text), 用户账户 account (text), 用户密码 psword (text)
-* 帖子 `{$userTable}`：用户账户 account (text),	文章标题 bbs_title (text), 文章内容 bbs_content (text)
+* 帖子 `{$userTable}`： 主键 id (bigint, AUTO_INCREMENT), 用户账户 account (text), 文章标题 bbs_title (text), 文章内容 bbs_content (text)
