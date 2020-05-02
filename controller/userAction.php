@@ -14,7 +14,7 @@ session_start();
 if(isset($_SESSION['user'])){
 	$userList	=	$_SESSION['user'];
 }else{
-	echo '<script> alert(\'未登录，请先登录！~~\');location.href=\'../login.php\';</script>';
+	echo "document.write('<div class=\"card\"><div class=\"card-body\">请先登录。</div></card>');";
 	exit;
 }
 
