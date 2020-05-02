@@ -18,6 +18,13 @@ if(isset($_SESSION['user'])){
 	exit;
 }
 
+$details = find($bbsTable,$db,'id',$id);
+
+if($_SESSION['user']['account'] != $details['account']){
+    echo '<script> alert(\'发帖的都不是你你改个毛线~~\');javascript:history.back(-1);</script>';
+    exit;
+}
+
 if($_POST){
 	if(empty($_GET['id'])){
 		echo '<script> alert(\'未找到帖子，请重试！~~\');javascript:history.back(-1);</script>';
