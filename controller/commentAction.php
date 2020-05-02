@@ -4,7 +4,7 @@
  */
 
 //1.加载公共函数库
-include 'controller/function.php';
+include 'function.php';
 
 //3.如果登录了，获取用户信息
 session_start();
@@ -17,10 +17,8 @@ if(isset($_SESSION['user'])){
 
 //4.发帖保存
 if($_POST){
-	$bbs_id  = $_GET['id'];
+	$id  = $_GET['id'];
 	$content = $_POST['content'];
-	echo $bbs_id;
-	echo $content;
 	$content = htmlspecialchars($content);
 	if(!$content){
 		echo '<script> alert(\'评论不能为空~~\');javascript:history.back(-1);</script>';
@@ -29,14 +27,15 @@ if($_POST){
 	// 获取当前时间戳
 	$add_time = time();
 	// 创建mysql语句
-	$sql = "INSERT INTO {$comTable} VALUES (null,'{$bbs_id}','{$userList['uid']}','{$content}','{$add_time}')";
+	$sql = "INSERT INTO {$comTable} VALUES ('{$id}','{$userList['account']}','{$content}')";
 	// 添加数据
+	// echo $sql;
 	$id  = insert($db,$sql);
-	if($id){
+	// if($id){
 		echo '<script> alert(\'评论成功~~\');location.href=\'/index.php?a=details&id='.$bbs_id.'\';</script>';
 		exit;
-	}else{
-		echo '<script> alert(\'评论失败，请重新尝试~~\');javascript:history.back(-1);</script>';
-		exit;
-	}
+	// }else{
+	// 	echo '<script> alert(\'评论失败，请重新尝试~~\');javascript:history.back(-1);</script>';
+	// 	exit;
+	// }
 }

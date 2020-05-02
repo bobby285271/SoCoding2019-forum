@@ -47,7 +47,7 @@
 ### 发表评论
 对应文件：后端 `controller/commentAction.php`，前端 `view/view-*.html`
 
-（具体需求待定中）用户在「查看某一帖子」页下方输入评论内容，POST 到 `commentAction.php`，检验数据合理性后，连同 **帖子的** 主键 ID 一并写入数据表 `$forum_bbs`。
+用户在「查看某一帖子」页下方输入评论内容 `content`，POST 到 `commentAction.php`，检验数据合理性后，连同 **帖子的** 主键 ID 和发帖人 `account` 一并写入数据表 `$forum_bbs`。
 
 ### 查看评论
 对应文件：后端 `?`，前端 `view/view-*.html`
@@ -64,4 +64,4 @@
 
 * 用户 `$userTable`： 用户昵称 nickname (text), 用户账户 account (text), 用户密码 psword (text)
 * 帖子 `$userTable`： 主键 id (bigint, AUTO_INCREMENT), 用户账户 account (text), 文章标题 bbs_title (text), 文章内容 bbs_content (text)
-* 评论 `$comTable`：待定
+* 评论 `$comTable`： **帖子** 主键 id (bigint), 用户账户 account (text), 评论内容 content (text)
