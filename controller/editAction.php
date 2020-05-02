@@ -4,7 +4,7 @@
  */
 
 //1.加载公共函数库
-include 'controller/function.php';
+include 'function.php';
 
 //2.设置模板名称
 $tplName = 'edit_tpl';
@@ -19,31 +19,28 @@ if(isset($_SESSION['user'])){
 }
 
 if($_POST){
-	if(empty($_POST['id'])){
+	if(empty($_GET['id'])){
 		echo '<script> alert(\'未找到帖子，请重试！~~\');javascript:history.back(-1);</script>';
 		exit;
 	}
 	//4.修改帖子
-	$bbs_title = $_POST['bbs_title'];
-	$bbs_title = htmlspecialchars($bbs_title);
-	if(!$bbs_title){
-		echo '<script> alert(\'标题不能为空~~\');javascript:history.back(-1);</script>';
-		exit;
-	}
 	$bbs_content = $_POST['bbs_content'];
-	$bbs_content = htmlspecialchars($bbs_content);
+	// echo $bbs_content;
+	// $bbs_content = htmlspecialchars($bbs_content);
 	if(!$bbs_content){
 		echo '<script> alert(\'内容不能为空~~\');javascript:history.back(-1);</script>';
 		exit;
 	}
 	// 获取当前时间戳
-	$add_time = time();
+	// $add_time = time();
 	// 修改数据
-	$value = 'bbs_title="'.$bbs_title.'",bbs_content="'.$bbs_content.'"';
-	$bbsWhere = 'bbs_id='.$_POST['id'];
+	$value = 'bbs_content="'.$bbs_content.'"';
+	$bbsWhere = 'id='.$_GET['id'];
+	// echo $value;
+	// echo $bbsWhere;
 	$id  = save($bbsTable,$db,$value,$bbsWhere);
 	if($id){
-		echo '<script> alert(\'修改成功~~\');location.href=\'/index.php?a=user\';</script>';
+		echo '<script> alert(\'修改成功~~\');location.href=\'../index.php\';</script>';
 		exit;
 	}else{
 		echo '<script> alert(\'修改失败，请重新尝试~~\');javascript:history.back(-1);</script>';

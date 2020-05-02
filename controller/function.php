@@ -120,7 +120,7 @@ function count_number($table,$db,$where){
 //插入数据，返回插入ID
 function insert($db,$sql){
     $conn   = db_connect($db);
-    echo $sql;
+    // echo $sql;
     $result = mysqli_query($conn,$sql);
     //执行插入操作
     if ($result){
@@ -134,6 +134,7 @@ function insert($db,$sql){
 function save($table,$db,$value,$where){
     $conn = db_connect($db);
     $sql  = 'UPDATE '.$table.' SET '.$value.' WHERE '.$where;
+    // echo $sql;
     $result = mysqli_query($conn, $sql);
     mysqli_close($conn);
     return $result;
