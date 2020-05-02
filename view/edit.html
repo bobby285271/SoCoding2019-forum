@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>编辑帖子 - SoCoding Forum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script>
+        // dirty hack
+        function GetRequest() {
+            var url = location.search; //获取url中"?"符后的字串
+            var theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                var str = url.substr(1);
+                strs = str.split("&");
+                for (var i = 0; i < strs.length; i++) {
+                    theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                }
+            }
+            return theRequest;
+        }
+        var Request = undefined;
+        Request = GetRequest();
+        var id = Request["id"]; 
+    </script>
+</head>
+
+<body>
+    <!-- 顶部导航栏 -->
+    <div id="headnav"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.php">首页</a></li>
+                    <li class="breadcrumb-item active"><a href="create.php">编辑帖子</a></li>
+                </ol>
+                <div class="card">
+                    <div class="card-header">
+                        <h4>
+                            <font color="green">编辑帖子</font>
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <!-- 输入框 -->
+                        <script>document.write("<form action=\"./controller/editAction.php?id=" + id + "\" method=\"POST\">");</script>
+                        <div class="input-group mb-3">
+
+                            <textarea class="form-control" rows="10"
+                                name="bbs_content"><?php $id = $_GET['id']; include "controller/detailsAction.php"; ?></textarea>
+                        </div>
+                        <div class="input-group mb-3">
+                            <!-- TODO：类别 -->
+                            <!-- <select class="custom-select d-block" required="">
+                                    <option value="">选择一个分类...</option>
+                                    <option>C++</option>
+                                    <option>Java</option>
+                                    <option>PHP</option>
+                                    <option>Python</option>
+                                </select> -->
+                            <button class="btn btn-info mb-3" type="submit">保存</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $("#headnav").load("./view/public/headnav.html");
+</script>
+
+</html>
