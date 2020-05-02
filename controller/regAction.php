@@ -6,6 +6,13 @@
 //1.加载公共函数库
 include 'function.php';
 
+
+session_start();
+if(isset($_SESSION['user'])){
+	echo '<script> alert(\'你已登录~~\');location.href=\'../index.php\';</script>';
+	exit;
+}
+
 // 2.设置模板名称
 // $tplName = 'reg_tpl';
 //3.如果登录，存储用户信息。跳转到上一页面
