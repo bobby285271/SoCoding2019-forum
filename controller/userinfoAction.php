@@ -4,7 +4,7 @@
  */
 
 //1.加载公共函数库
-include 'controller/function.php';
+include 'function.php';
 
 //2.设置模板名称
 $tplName = 'userinfo_tpl';

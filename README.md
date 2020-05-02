@@ -18,7 +18,7 @@
 ├── login.php           # 用户登录页
 ├── posts.php           # 浏览某一个板块的所有帖子
 ├── register.php        # 用户注册页
-├── user.php            # 用户信息页
+├── user.php            # 个人中心页
 ├── view.php            # 查看某个帖子
 |
 ├── DEVELOPMENT.md      # 技术文档
