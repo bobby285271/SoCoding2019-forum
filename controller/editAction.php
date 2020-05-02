@@ -26,7 +26,7 @@ if($_POST){
 	//4.修改帖子
 	$bbs_content = $_POST['bbs_content'];
 	// echo $bbs_content;
-	// $bbs_content = htmlspecialchars($bbs_content);
+	$bbs_content = htmlspecialchars($bbs_content);
 	if(!$bbs_content){
 		echo '<script> alert(\'内容不能为空~~\');javascript:history.back(-1);</script>';
 		exit;
