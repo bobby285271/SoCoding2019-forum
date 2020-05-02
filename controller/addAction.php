@@ -6,8 +6,8 @@
 //1.加载公共函数库
 include 'function.php';
 
-//2.设置模板名称
-$tplName = 'add_tpl';
+// //2.设置模板名称
+// $tplName = 'add_tpl';
 
 //3.如果登录了，获取用户信息
 session_start();
@@ -31,8 +31,8 @@ if($_POST){
 		echo '<script> alert(\'内容不能为空~~\');javascript:history.back(-1);</script>';
 		exit;
 	}
-	// 获取当前时间戳
-	$add_time = time();
+	// // 获取当前时间戳
+	// $add_time = time();
 	// 创建mysql语句
 	$sql = "INSERT INTO {$bbsTable} VALUES (0,'{$userList['account']}','{$bbs_title}','{$bbs_content}')";
 	// 添加数据

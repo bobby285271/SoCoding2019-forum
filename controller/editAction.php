@@ -6,8 +6,8 @@
 //1.加载公共函数库
 include 'function.php';
 
-//2.设置模板名称
-$tplName = 'edit_tpl';
+// //2.设置模板名称
+// $tplName = 'edit_tpl';
 
 //3.如果登录了，获取用户信息
 session_start();
