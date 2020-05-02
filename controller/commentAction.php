@@ -32,7 +32,7 @@ if($_POST){
 	// echo $sql;
 	$id  = insert($db,$sql);
 	// if($id){
-		echo '<script> alert(\'评论成功~~\');location.href=\'/index.php?a=details&id='.$bbs_id.'\';</script>';
+		echo '<script> alert(\'评论成功~~\');javascript:history.back(-1);</script>';
 		exit;
 	// }else{
 	// 	echo '<script> alert(\'评论失败，请重新尝试~~\');javascript:history.back(-1);</script>';
