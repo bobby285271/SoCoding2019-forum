@@ -17,10 +17,15 @@ if(isset($_SESSION['user'])){
 	echo '<script> alert(\'未登录，请先登录！~~\');location.href=\'../login.php\';</script>';
 	exit;
 }
-
+$id = $_GET['id'];
 $details = find($bbsTable,$db,'id',$id);
 
-if($_SESSION['user']['account'] != $details['account']){
+if(! $details){
+    echo '<script> alert(\'帖子不存在~~\');javascript:history.back(-1);</script>';
+    exit;
+}
+
+if($userList['account'] != $details['account']){
     echo '<script> alert(\'发帖的都不是你你改个毛线~~\');javascript:history.back(-1);</script>';
     exit;
 }
