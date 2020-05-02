@@ -17,8 +17,10 @@ if(isset($_SESSION['user'])){
 
 //4.发帖保存
 if($_POST){
-	$bbs_id  = $_POST['bbs_id'];
+	$bbs_id  = $_GET['id'];
 	$content = $_POST['content'];
+	echo $bbs_id;
+	echo $content;
 	$content = htmlspecialchars($content);
 	if(!$content){
 		echo '<script> alert(\'评论不能为空~~\');javascript:history.back(-1);</script>';
