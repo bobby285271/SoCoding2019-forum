@@ -76,7 +76,7 @@ if (mysqli_num_rows($result) > 0) {
         echo "document.write('<a href=\"view.php?id=" .$row["id"]. "\" class=\"list-group-item list-group-item-action\">" .$row["bbs_title"]. "</a>');";
     }
 } else {
-    echo "0 结果";
+    echo "document.write('<div class=\"card\"><div class=\"card-body\">暂时还没有帖子。</div></card>');";
 }
 
 
