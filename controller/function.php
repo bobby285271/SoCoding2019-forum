@@ -7,12 +7,12 @@
 header("Content-type: text/html; charset=utf-8");
 //设置中国时区
 date_default_timezone_set('PRC');
-//域名
-$url = 'http://www.zhibo.com/index.php';
-//设置每页显示信息数量
-$num = 10;
-//设置页面标题后缀
-define('SITE_SUFFIX','SoCoding');
+// //域名
+// $url = 'http://www.zhibo.com/index.php';
+// //设置每页显示信息数量
+// $num = 10;
+// //设置页面标题后缀
+// define('SITE_SUFFIX','SoCoding');
 
 //设置数据库连接参数
 $db = array(
