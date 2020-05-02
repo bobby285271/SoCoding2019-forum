@@ -11,9 +11,14 @@
 用户输入账户 `account` 密码 `psword`，POST 到 `loginAction.php`，从数据表 `forum_user` 里寻找 `account` 所在行并验证密码是否正确，正确则设置 session。
 
 ### 个人中心
-对应文件：`controller/userinfoAction.php` `controller/userAction.php` - `view/user.html`
+对应文件：后端 `controller/userAction.php`，前端 `view/user.html`
 
 显示已登录用户的账户 `account`、昵称 `nickname`、发布的帖子（在查看所有帖子模块上改编即可）等信息。
+
+### 注销
+对应文件：后端 `controller/logoutAction.php`
+
+清理已经设置的 session。
 
 ---
 
