@@ -24,12 +24,16 @@ if($_GET['action'])
     }
     else if ($action == allpost){
         //某个分类所有帖子
-        include './view/post/allpost.html';
+        include './view/post/list.html';
     }
     //用户部分
     else if ($action == login){
         //登录
         include './view/user/login.html';
+    }
+    else if ($action == logout){
+        //登录
+        include './controller/user/logout.php';
     }
     else if ($action == register){
         //注册
@@ -37,7 +41,10 @@ if($_GET['action'])
     }
     else if ($action == user){
         //个人中心
-        include './view/user/userinfo.html';
+        include './view/user/info.html';
+    }
+    else{
+        include './view/index.html';
     }
 }
 else {

@@ -37,7 +37,7 @@
             <div class="col-md-12">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.php">首页</a></li>
-                    <li class="breadcrumb-item active"><a href="create.php">编辑帖子</a></li>
+                    <li class="breadcrumb-item active"><a href="index.php?action=edit">编辑帖子</a></li>
                 </ol>
                 <div class="card">
                     <div class="card-header">
@@ -47,11 +47,11 @@
                     </div>
                     <div class="card-body">
                         <!-- 输入框 -->
-                        <script>document.write("<form action=\"./controller/editAction.php?id=" + id + "\" method=\"POST\">");</script>
+                        <script>document.write("<form action=\"./controller/post/edit.php?id=" + id + "\" method=\"POST\">");</script>
                         <div class="input-group mb-3">
 
                             <textarea class="form-control" rows="10"
-                                name="bbs_content"><?php $id = $_GET['id']; include "controller/detailsAction.php"; ?></textarea>
+                                name="bbs_content"><?php $id = $_GET['id']; include "controller/post/view.php"; ?></textarea>
                         </div>
                         <div class="input-group mb-3">
                             <!-- TODO：类别 -->

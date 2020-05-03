@@ -1,22 +1,22 @@
 <nav class="navbar navbar-expand-sm bg-info navbar-dark">
     <div class="container">
-        <a class="navbar-brand" href="index.php">SoCoding Forum (Beta)</a>
+        <a class="navbar-brand" href="index.php">SoCoding Forum</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item"><a class="nav-link" href="create.php" target="_top">发表帖子</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.php?action=create" target="_top">发表帖子</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                         用户
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="login.php" target="_top">登录</a>
-                        <a class="dropdown-item" href="register.php" target="_top">注册</a>
-                        <a class="dropdown-item" href="user.php" target="_top">个人中心</a>
-                        <a class="dropdown-item" href="controller/logoutAction.php" target="_top">注销</a>
+                        <a class="dropdown-item" href="index.php?action=login" target="_top">登录</a>
+                        <a class="dropdown-item" href="index.php?action=register" target="_top">注册</a>
+                        <a class="dropdown-item" href="index.php?action=userinfo" target="_top">个人中心</a>
+                        <a class="dropdown-item" href="index.php?action=logout" target="_top">注销</a>
                         
                     </div>
                 </li>

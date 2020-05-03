@@ -1,7 +1,7 @@
 <?php
 
 //1.加载公共函数库
-include 'function.php';
+include '../public/function.php';
 
 $sql = "SELECT * FROM {$bbsTable}";
 $conn = db_connect($db);

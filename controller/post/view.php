@@ -7,7 +7,7 @@ $id = $_GET['id'];
 //  */
 
 // //1.加载公共函数库
-include 'function.php';
+include '../public/function.php';
 
 // //4.获取帖子详情
 $details = find($bbsTable,$db,'id',$id);

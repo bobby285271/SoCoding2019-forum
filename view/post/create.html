@@ -20,7 +20,7 @@
             <div class="col-md-12">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.php">首页</a></li>
-                    <li class="breadcrumb-item active"><a href="create.php">发布帖子</a></li>
+                    <li class="breadcrumb-item active"><a href="index.php?action=create">发布帖子</a></li>
                 </ol>
                 <div class="card">
                     <div class="card-header">
@@ -30,7 +30,7 @@
                     </div>
                     <div class="card-body">
                         <!-- 输入框 -->
-                        <form action="./controller/addAction.php" method="POST">
+                        <form action="./controller/post/create.php" method="POST">
                             <div class="input-group mb-3 input-group-lg">
                                 <input type="text" placeholder="请输入标题..." class="form-control" name="bbs_title">
                             </div>

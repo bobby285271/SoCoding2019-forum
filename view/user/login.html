@@ -21,7 +21,7 @@
             <div class="col-md-12">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.php">首页</a></li>
-                    <li class="breadcrumb-item active"><a href="login.php">用户登录</a></li>
+                    <li class="breadcrumb-item active"><a href="index.php?action=login">用户登录</a></li>
                 </ol>
                 <div class="card">
                     <div class="card-header">
@@ -41,7 +41,7 @@
                                     <h2 class="text-center mb-4">
                                         <font color="green">欢迎回来</font>
                                     </h2>
-                                    <form action="./controller/loginAction.php" method="POST">
+                                    <form action="./controller/user/login.php" method="POST">
                                         <input type="text" name="account" class="form-control mb-4"
                                             placeholder="请输入帐户" required>
                                         <input type="password" name="psword" class="form-control mb-4"

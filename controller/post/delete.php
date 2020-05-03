@@ -1,6 +1,6 @@
 <?php
 //1.加载公共函数库
-include 'function.php';
+include '../public/function.php';
 
 $id = $_GET['id'];
 
