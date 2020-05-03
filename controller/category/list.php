@@ -3,7 +3,7 @@
 //1.加载公共函数库
 include 'function.php';
 
-$sql = "SELECT * FROM {$catTable}";
+$sql = "SELECT * FROM {$categoryTable}";
 $conn = db_connect($db);
 $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {

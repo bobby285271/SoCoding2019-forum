@@ -15,7 +15,7 @@ if(isset($_SESSION['user'])){
 	exit;
 }
 $id = $_GET['id'];
-$details = find($bbsTable,$db,'id',$id);
+$details = find($postTable,$db,'id',$id);
 
 if(! $details){
     echo '<script> alert(\'帖子不存在~~\');javascript:history.back(-1);</script>';
@@ -47,7 +47,7 @@ if($_POST){
 	$bbsWhere = 'id='.$_GET['id'];
 	// echo $value;
 	// echo $bbsWhere;
-	$id  = save($bbsTable,$db,$value,$bbsWhere);
+	$id  = save($postTable,$db,$value,$bbsWhere);
 	if($id){
 		echo '<script> alert(\'修改成功~~\');location.href=\'../index.php\';</script>';
 		exit;
@@ -61,5 +61,5 @@ if($_POST){
 		exit;
 	}
 	//4.查询帖子
-	$details = find($bbsTable,$db,'bbs_id',$_GET['id']);
+	$details = find($postTable,$db,'bbs_id',$_GET['id']);
 }

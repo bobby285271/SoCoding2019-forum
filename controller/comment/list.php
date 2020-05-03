@@ -6,7 +6,7 @@
 
 $id = $_GET['id'];
 
-$sql = "SELECT * FROM {$comTable}";
+$sql = "SELECT * FROM {$commentTable}";
 $conn = db_connect($db);
 $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {

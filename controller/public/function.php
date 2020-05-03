@@ -14,11 +14,11 @@ $db = array(
     'db_name' => 'forum'
 );
 
-//设置用到的数据表
-$bbsTable  = 'forum_bbs';           //帖子
-$catTable  = 'forum_categories';    //类别
-$comTable  = 'forum_comment';       //评论
-$userTable = 'forum_user';          //用户
+//设置用到的数据表  
+$postTable  = 'forum_bbs';               //帖子
+$categoryTable  = 'forum_categories';    //类别
+$commentTable  = 'forum_comment';        //评论
+$userTable = 'forum_user';               //用户
 
 function db_connect($db)
 {

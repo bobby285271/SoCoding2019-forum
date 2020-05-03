@@ -31,7 +31,7 @@ if (mysqli_num_rows($result) > 0) {
         // echo "id: " . $row["account"]. " <br>";
         if($userList['account'] == $row['account']) {
             $cnt = $cnt + 1;
-            echo "document.write('<a href=\"view.php?id=" .$row["id"]. "\" class=\"list-group-item list-group-item-action\">" .$row["bbs_title"]. "</a>');";
+            echo "document.write('<a href=\"index.php?action=viewpost&id=" .$row["id"]. "\" class=\"list-group-item list-group-item-action\">" .$row["bbs_title"]. "</a>');";
         }
     }
 } 

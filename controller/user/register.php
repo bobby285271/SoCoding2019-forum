@@ -9,7 +9,7 @@ include '../public/function.php';
 
 session_start();
 if(isset($_SESSION['user'])){
-	echo '<script> alert(\'你已登录~~\');location.href=\'../index.php\';</script>';
+	echo '<script> alert(\'你已登录~~\');location.href=\'../../index.php\';</script>';
 	exit;
 }
 
@@ -56,7 +56,7 @@ if($_POST){
 		$userList = find($userTable, $db, 'account', $account);
 		session_start();
 		$_SESSION['user']	=	$userList;
-		echo '<script> alert(\'注册成功~~\');location.href=\'../index.php\';</script>';
+		echo '<script> alert(\'注册成功~~\');location.href=\'../index.php?action=login\';</script>';
 	// }else{
 	// 	echo '<script> alert(\'注册失败，请重新尝试~~\');javascript:history.back(-1);</script>';
 	// }

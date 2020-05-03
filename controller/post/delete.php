@@ -12,14 +12,14 @@ if(isset($_SESSION['user'])){
 	exit;
 }
 
-$details = find($bbsTable,$db,'id',$id);
+$details = find($postTable,$db,'id',$id);
 
 if($_SESSION['user']['account'] != $details['account']){
     echo '<script> alert(\'发帖的都不是你你删个毛线~~\');javascript:history.back(-1);</script>';
     exit;
 }
 
-$sql = "DELETE FROM {$bbsTable} WHERE ((`id` = '$id'))";
+$sql = "DELETE FROM {$postTable} WHERE ((`id` = '$id'))";
 $conn = db_connect($db);
 $result = mysqli_query($conn, $sql);
 

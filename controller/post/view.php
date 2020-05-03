@@ -10,7 +10,7 @@ $id = $_GET['id'];
 include '../public/function.php';
 
 // //4.获取帖子详情
-$details = find($bbsTable,$db,'id',$id);
+$details = find($postTable,$db,'id',$id);
 // echo $details['bbs_content'];
 if(!$details){
     echo "找不到帖子";

@@ -1,21 +1,3 @@
-<!-- 
-
-
-
- -->
-<!-- 本文件仅用于开发，如需部署按照下方说明分割 -->
-<!-- 
-
-
-
- -->
-<!-- view-head.html -->
-<!-- 
-
-
-
- -->
-
 <!DOCTYPE html>
 <html>
 
@@ -24,9 +6,9 @@
     <title>帖子详情 - SoCoding Forum</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="./view/assets/css/bootstrap.min.css">
-    <script src="./view/assets/js/jquery.min.js"></script>
-    <script src="./view/assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./view/public/css/bootstrap.min.css">
+    <script src="./view/public/js/jquery.min.js"></script>
+    <script src="./view/public/js/bootstrap.min.js"></script>
     <script>
         // dirty hack
         function GetRequest() {
@@ -58,8 +40,8 @@
             <div class="col-md-12">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.php">首页</a></li>
-                    <li class="breadcrumb-item"><a href="posts.php">看帖</a></li>
-                    <li class="breadcrumb-item active"><a href="view.php">帖子详情</a></li>
+                    <li class="breadcrumb-item"><a href="index.php?action=allpost">看帖</a></li>
+                    <li class="breadcrumb-item active"><a href="index.php?action=viewpost">帖子详情</a></li>
                 </ol>
                 <div class="card">
                     <!-- 帖子标题 -->
@@ -104,7 +86,7 @@
  -->
                         </ul>
                         <hr class="mb-4">
-                        <script>document.write("<form class=\"form-inline\" action=\"./controller/commentAction.php?id=" + id + "\" method=\"POST\">");</script>
+                        <script>document.write("<form class=\"form-inline\" action=\"./controller/comment/create.php?id=" + id + "\" method=\"POST\">");</script>
                         <input type="text" name="content" class="col-md-11 form-control" placeholder="想不想说两句...">
                         <button class="col-md-1 btn btn-primary btn-info" type="submit">发布</button>
                         </form>

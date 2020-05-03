@@ -4,17 +4,14 @@
  */
 
 //1.加载公共函数库
-include 'function.php';
-
-// //2.设置模板名称
-// $tplName = 'add_tpl';
+include '../public/function.php';
 
 //3.如果登录了，获取用户信息
 session_start();
 if(isset($_SESSION['user'])){
 	$userList	=	$_SESSION['user'];
 }else{
-	echo '<script> alert(\'未登录，请先登录！~~\');location.href=\'../login.php\';</script>';
+	echo '<script> alert(\'未登录，请先登录！~~\');location.href=\'../index.php?action=login\';</script>';
 	exit;
 }
 //4.发帖保存
@@ -34,11 +31,11 @@ if($_POST){
 	// // 获取当前时间戳
 	// $add_time = time();
 	// 创建mysql语句
-	$sql = "INSERT INTO {$bbsTable} VALUES (0,'{$userList['account']}','{$bbs_title}','{$bbs_content}')";
+	$sql = "INSERT INTO {$postTable} VALUES (0,'{$userList['account']}','{$bbs_title}','{$bbs_content}')";
 	// 添加数据
 	$id  = insert($db,$sql);
 	// if($id){
-		echo '<script> alert(\'发帖成功~~\');location.href=\'../index.php\';</script>';
+		echo '<script> alert(\'发帖成功~~\');location.href=\'../../index.php\';</script>';
 		exit;
 	// }else{
 	// 	echo '<script> alert(\'发帖失败，请重新尝试~~\');javascript:history.back(-1);</script>';

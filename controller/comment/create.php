@@ -27,7 +27,7 @@ if($_POST){
 	// // 获取当前时间戳
 	// $add_time = time();
 	// 创建mysql语句
-	$sql = "INSERT INTO {$comTable} VALUES ('{$id}','{$userList['account']}','{$content}')";
+	$sql = "INSERT INTO {$commentTable} VALUES ('{$id}','{$userList['account']}','{$content}')";
 	// 添加数据
 	// echo $sql;
 	$id  = insert($db,$sql);
