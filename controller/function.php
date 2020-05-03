@@ -23,25 +23,26 @@ $db = array(
 );
 
 //设置用到的数据表
-$bbsTable  = 'forum_bbs';    //帖子
-$comTable  = 'forum_comment';//评论
-$userTable = 'forum_user';   //用户
+$bbsTable  = 'forum_bbs';           //帖子
+$catTable  = 'forum_categories';    //类别
+$comTable  = 'forum_comment';       //评论
+$userTable = 'forum_user';          //用户
 
 
-function auto_load_tpl($tplName)
-{
-    global $bbsList;    //论坛帖子列表
-    global $bbsListPage;//论坛帖子列表分页html
-    global $bbsListHot; //论坛热门帖子列表
-    global $bbsType;    //论坛帖子类型 1最新 2热门
-    global $details;    //论坛帖子详情
-    global $comment;    //论坛评论列表
-    global $userList;   //论坛当前用户信息
-    global $pUserList;  //论坛发帖人用户信息
+// function auto_load_tpl($tplName)
+// {
+//     global $bbsList;    //论坛帖子列表
+//     global $bbsListPage;//论坛帖子列表分页html
+//     global $bbsListHot; //论坛热门帖子列表
+//     global $bbsType;    //论坛帖子类型 1最新 2热门
+//     global $details;    //论坛帖子详情
+//     global $comment;    //论坛评论列表
+//     global $userList;   //论坛当前用户信息
+//     global $pUserList;  //论坛发帖人用户信息
 
-    //自动加载模板
-    include $tplName.'.php';
-}
+//     //自动加载模板
+//     include $tplName.'.php';
+// }
 //连接数据库，使用频繁，每次调用数据，就会使用。
 // TP3 查询语句写法。
 // M('Forum_bbs')->field(true)->where(array('status'=>1))->find();
