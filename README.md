@@ -21,7 +21,7 @@
 ├── user.php            # 个人中心页
 ├── view.php            # 查看某个帖子
 |
-├── DEVELOPMENT.md      # 技术文档
+├── docs/               # 技术文档
 ├── README.md           # 总览文档
 ```
 
