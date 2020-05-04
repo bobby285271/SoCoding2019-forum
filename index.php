@@ -4,7 +4,7 @@ if($_GET['action'])
 {
     $action = $_GET['action'];
     //帖子部分
-    if($action == 'viewpost') {
+    if($action == 'view') {
         //浏览某个帖子
         include './view/post/view.html';
     }
@@ -16,7 +16,7 @@ if($_GET['action'])
         //新建帖子
         include './view/post/create.html';
     }
-    else if ($action == 'allpost'){
+    else if ($action == 'list'){
         //某个分类所有帖子
         include './view/post/list.html';
     }
@@ -33,7 +33,7 @@ if($_GET['action'])
         //注册
         include './view/user/register.html';
     }
-    else if ($action == 'userinfo'){
+    else if ($action == 'info'){
         //个人中心
         include './view/user/info.html';
     }
