@@ -18,16 +18,16 @@ if(isset($_SESSION['user'])){
 //4.发帖保存
 if($_POST){
 	$id  = $_GET['id'];
-	$content = $_POST['content'];
-	$content = htmlspecialchars($content);
-	if(!$content){
+	$comment_content = $_POST['comment_content'];
+	$comment_content = htmlspecialchars($comment_content);
+	if(!$comment_content){
 		echo '<script> alert(\'评论不能为空~~\');javascript:history.back(-1);</script>';
 		exit;
 	}
 	// // 获取当前时间戳
 	// $add_time = time();
 	// 创建mysql语句
-	$sql = "INSERT INTO {$commentTable} VALUES ('{$id}','{$userList['account']}','{$content}')";
+	$sql = "INSERT INTO {$commentTable} VALUES ('{$id}','{$userList['user_account']}','{$comment_content}')";
 	// 添加数据
 	// echo $sql;
 	$id  = insert($db,$sql);

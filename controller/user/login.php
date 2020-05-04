@@ -16,20 +16,20 @@ if(isset($_SESSION['user'])){
 
 if($_POST){
 
-	$account = $_POST['account'];
+	$user_account = $_POST['user_account'];
 
-	$passwd = $_POST['passwd'];
+	$user_passwd = $_POST['user_passwd'];
 	
-	if(!$account || !$passwd){
+	if(!$user_account || !$user_passwd){
 		echo '<script> alert(\'抱歉，出现了内部错误，请联系开发者~~\');javascript:history.back(-1);</script>';
 		exit;
 	}else{
-		$passwd = md5($passwd);
+		$user_passwd = md5($user_passwd);
 	}
 	// 获取用户信息
-	$userList = find($userTable,$db,'account',$account);
+	$userList = find($userTable,$db,'user_account',$user_account);
 	if($userList){
-		if($userList['passwd'] != $passwd){
+		if($userList['user_passwd'] != $user_passwd){
 			echo '<script> alert(\'密码错误~~\');javascript:history.back(-1);</script>';
 			exit;
 		}

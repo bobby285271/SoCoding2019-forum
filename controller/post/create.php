@@ -16,22 +16,22 @@ if(isset($_SESSION['user'])){
 }
 //4.发帖保存
 if($_POST){
-	$bbs_title = $_POST['bbs_title'];
-	$bbs_title = htmlspecialchars($bbs_title);
-	if(!$bbs_title){
+	$post_title = $_POST['post_title'];
+	$post_title = htmlspecialchars($post_title);
+	if(!$post_title){
 		echo '<script> alert(\'标题不能为空~~\');javascript:history.back(-1);</script>';
 		exit;
 	}
-	$bbs_content = $_POST['bbs_content'];
-	$bbs_content = htmlspecialchars($bbs_content);
-	if(!$bbs_content){
+	$post_content = $_POST['post_content'];
+	$post_content = htmlspecialchars($post_content);
+	if(!$post_content){
 		echo '<script> alert(\'内容不能为空~~\');javascript:history.back(-1);</script>';
 		exit;
 	}
 	// // 获取当前时间戳
 	// $add_time = time();
 	// 创建mysql语句
-	$sql = "INSERT INTO {$postTable} VALUES (0,'{$userList['account']}','{$bbs_title}','{$bbs_content}')";
+	$sql = "INSERT INTO {$postTable} VALUES (0,'{$userList['user_account']}','{$post_title}','{$post_content}')";
 	// 添加数据
 	$id  = insert($db,$sql);
 	// if($id){

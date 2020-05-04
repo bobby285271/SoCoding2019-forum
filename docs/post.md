@@ -4,7 +4,7 @@
 * 前端目录：`view/post`
 
 ### 发布帖子 `post`
-<!-- 用户输入帖子标题 `bbs_title` 内容 `bbs_content`，POST 到 `addAction.php` 检验数据合理性后，连同主键 ID 一并写入数据表 `$forum_bbs`。 -->
+<!-- 用户输入帖子标题 `post_title` 内容 `post_content`，POST 到 `addAction.php` 检验数据合理性后，连同主键 ID 一并写入数据表 `$forum_bbs`。 -->
 
 ### 查看所有帖子 `list`
 <!-- 对应文件：后端 `controller/listAction.php`，前端 `view/posts.html`

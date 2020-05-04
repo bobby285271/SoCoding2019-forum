@@ -22,7 +22,7 @@ if(! $details){
     exit;
 }
 
-if($userList['account'] != $details['account']){
+if($userList['user_account'] != $details['user_account']){
     echo '<script> alert(\'发帖的都不是你你改个毛线~~\');javascript:history.back(-1);</script>';
     exit;
 }
@@ -33,17 +33,17 @@ if($_POST){
 		exit;
 	}
 	//4.修改帖子
-	$bbs_content = $_POST['bbs_content'];
-	// echo $bbs_content;
-	$bbs_content = htmlspecialchars($bbs_content);
-	if(!$bbs_content){
+	$post_content = $_POST['post_content'];
+	// echo $post_content;
+	$post_content = htmlspecialchars($post_content);
+	if(!$post_content){
 		echo '<script> alert(\'内容不能为空~~\');javascript:history.back(-1);</script>';
 		exit;
 	}
 	// 获取当前时间戳
 	// $add_time = time();
 	// 修改数据
-	$value = 'bbs_content="'.$bbs_content.'"';
+	$value = 'post_content="'.$post_content.'"';
 	$bbsWhere = 'id='.$_GET['id'];
 	// echo $value;
 	// echo $bbsWhere;
