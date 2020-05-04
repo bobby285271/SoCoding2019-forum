@@ -6,9 +6,6 @@
 //1.加载公共函数库
 include '../public/function.php';
 
-//2.设置模板名称
-$tplName = 'user_tpl';
-
 //3.如果登录，存储用户信息。未登录，跳转到登录页面
 session_start();
 if(isset($_SESSION['user'])){
@@ -21,7 +18,7 @@ if(isset($_SESSION['user'])){
 echo "document.write('<div class=\"card\"><div class=\"card-body\"><h4>您好，" .$userList['nickname']. "（" .$userList['account']. "）。您可以在这里管理您的帖子。</h4></div></card>');";
 
 
-$sql = "SELECT * FROM {$bbsTable}";
+$sql = "SELECT * FROM {$postTable}";
 $conn = db_connect($db);
 $result = mysqli_query($conn, $sql);
 $cnt = 0;
