@@ -19,10 +19,7 @@ if(isset($_SESSION['user'])){
 if($_POST){
 	// 判断账号不能为空
 	$account = $_POST['account'];
-	if(!$account){
-		echo '<script> alert(\'账号不能为空~~\');javascript:history.back(-1);</script>';
-		exit;
-	}
+
 	// 判断账号是否重复
 	$userList = find($userTable,$db,'account',$account);
 	if($userList){
@@ -31,22 +28,27 @@ if($_POST){
 	}
 	// 判断昵称不能为空
 	$nickname = $_POST['nickname'];
-	if(!$nickname){
-		echo '<script> alert(\'昵称不能为空~~\');javascript:history.back(-1);</script>';
+
+	// 判断密码不能为空
+	$passwd1 = $_POST['passwd1'];
+	$passwd2 = $_POST['passwd2'];
+
+	if(!$account || !$nickname || !$passwd1 || !$passwd2){
+		echo '<script> alert(\'抱歉，出现了内部错误，请联系开发者~~\');javascript:history.back(-1);</script>';
 		exit;
 	}
-	// 判断密码不能为空
-	$psword = $_POST['psword'];
-	if(!$psword){
-		echo '<script> alert(\'密码不能为空~~\');javascript:history.back(-1);</script>';
+
+	if($passwd1 != $passwd2){
+		echo '<script> alert(\'密码不一致~~\');javascript:history.back(-1);</script>';
 		exit;
 	}else{
-		$psword = md5($psword);
+		$passwd = md5($passwd1);
 	}
+
 	// 获取当前时间戳
 	$add_time = time();
 	// 创建mysql语句
-	$sql = "INSERT INTO {$userTable} (nickname, account, psword) VALUES ('{$nickname}','{$account}','{$psword}')";
+	$sql = "INSERT INTO {$userTable} VALUES ('{$nickname}','{$account}','{$passwd}',0)";
 	// 添加数据
 	$id = insert($db,$sql);
 	// echo $id;
