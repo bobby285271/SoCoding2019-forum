@@ -1,7 +1,6 @@
 <?php
 
-// 公共函数库已在别处加载
-// include 'function.php';
+// include './controller/public/function.php';
 
 
 $id = $_GET['id'];

@@ -52,17 +52,8 @@
                     </div>
                     <!-- 帖子正文 -->
                     <div class="card-body">
-                        <!-- 
-
-
-
- -->
-                        <!-- view-mid.html -->
-                        <!-- 
-
-
-
- -->
+                    <script>document.write("<a href=\"./controller/post/delete.php?id=" +id+ "\">删除帖子</a> <a href=\"index.php?action=edit&id=" +id+ "\">编辑帖子</a><br /><br />");</script>
+                        <?php $id = $_GET['id']; include "controller/post/view.php"; ?>
                     </div>
                 </div>
                 <div class="card">
@@ -73,17 +64,7 @@
                     </div>
                     <div class="card-body">
                         <ul class="list-group">
-                            <!-- 
-
-
-
- -->
-                            <!-- view-foot.html -->
-                            <!-- 
-
-
-
- -->
+                            <?php $id = $_GET['id']; include "controller/comment/list.php"; ?>
                         </ul>
                         <hr class="mb-4">
                         <script>document.write("<form class=\"form-inline\" action=\"./controller/comment/create.php?id=" + id + "\" method=\"POST\">");</script>

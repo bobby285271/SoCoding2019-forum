@@ -37,7 +37,7 @@
             <div class="col-md-12">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.php">首页</a></li>
-                    <li class="breadcrumb-item active"><a href="index.php?action=edit">编辑帖子</a></li>
+                    <li class="breadcrumb-item active"><a href="#">编辑帖子</a></li>
                 </ol>
                 <div class="card">
                     <div class="card-header">
@@ -54,14 +54,13 @@
                                 name="bbs_content"><?php $id = $_GET['id']; include "controller/post/view.php"; ?></textarea>
                         </div>
                         <div class="input-group mb-3">
-                            <!-- TODO：类别 -->
-                            <!-- <select class="custom-select d-block" required="">
-                                    <option value="">选择一个分类...</option>
-                                    <option>C++</option>
-                                    <option>Java</option>
-                                    <option>PHP</option>
-                                    <option>Python</option>
-                                </select> -->
+                            <select class="custom-select d-block" required="">
+                                <option value="">选择一个分类...</option>
+                                <option>C++</option>
+                                <option>Java</option>
+                                <option>PHP</option>
+                                <option>Python</option>
+                            </select>
                             <button class="btn btn-info mb-3" type="submit">保存</button>
                         </div>
                         </form>

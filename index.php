@@ -6,7 +6,7 @@ if($_GET['action'])
     //帖子部分
     if($action == 'viewpost') {
         //浏览某个帖子
-        include './view/view.html';
+        include './view/post/view.html';
     }
     else if ( $action == 'edit'){
         //编辑帖子

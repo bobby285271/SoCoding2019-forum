@@ -11,7 +11,7 @@ session_start();
 if(isset($_SESSION['user'])){
 	$userList	=	$_SESSION['user'];
 }else{
-	echo '<script> alert(\'未登录，请先登录！~~\');location.href=\'../login.php\';</script>';
+	echo '<script> alert(\'未登录，请先登录！~~\');location.href=\'../../index.php?action=login\';</script>';
 	exit;
 }
 $id = $_GET['id'];
@@ -49,7 +49,7 @@ if($_POST){
 	// echo $bbsWhere;
 	$id  = save($postTable,$db,$value,$bbsWhere);
 	if($id){
-		echo '<script> alert(\'修改成功~~\');location.href=\'../index.php\';</script>';
+		echo '<script> alert(\'修改成功~~\');location.href=\'../../index.php\';</script>';
 		exit;
 	}else{
 		echo '<script> alert(\'修改失败，请重新尝试~~\');javascript:history.back(-1);</script>';

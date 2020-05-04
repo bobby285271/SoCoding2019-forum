@@ -4,14 +4,14 @@
  */
 
 //1.加载公共函数库
-include 'function.php';
+include '../public/function.php';
 
 //3.如果登录了，获取用户信息
 session_start();
 if(isset($_SESSION['user'])){
 	$userList	=	$_SESSION['user'];
 }else{
-	echo '<script> alert(\'未登录，请先登录！~~\');location.href=\'../login.php\';</script>';
+	echo '<script> alert(\'未登录，请先登录！~~\');location.href=\'../../index.php?action=login\';</script>';
 	exit;
 }
 
