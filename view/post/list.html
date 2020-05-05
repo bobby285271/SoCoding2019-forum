@@ -37,6 +37,7 @@
                             <!-- <script src="controller/post/list.php"></script> -->
                             <?php include "controller/post/list.php"; ?>
                         </div>
+                        <?php $page = $_GET['page']; $lastpage=$page-1;$nextpage=$page+1; echo "<a href=\"index.php?action=list&page=${lastpage}\">上一页</a> <a href=\"index.php?action=list&page=${nextpage}\">下一页</a>"; ?>
                     </div>
                 </div>
             </div>
