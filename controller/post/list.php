@@ -4,10 +4,17 @@
 include './controller/public/function.php';
 
 $page = $_GET['page'];
+$category = $_GET['category'];
 
 $page = ($page-1)*10;
 
-$sql = "SELECT * FROM {$postTable} LIMIT {$page},10";
+if($category){
+    $sql = "SELECT * FROM {$postTable} WHERE category_id= {$category} LIMIT {$page},10";
+}
+else {
+    $sql = "SELECT * FROM {$postTable} LIMIT {$page},10";
+}
+
 $conn = db_connect($db);
 $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {

@@ -28,10 +28,11 @@ if($_POST){
 		echo '<script> alert(\'内容不能为空~~\');javascript:history.back(-1);</script>';
 		exit;
 	}
+	$category_id = $_POST['category_id'];
 	// // 获取当前时间戳
 	// $add_time = time();
 	// 创建mysql语句
-	$sql = "INSERT INTO {$postTable} VALUES (0,'{$userList['user_account']}','{$post_title}','{$post_content}')";
+	$sql = "INSERT INTO {$postTable} VALUES (0,'{$userList['user_account']}','{$post_title}','{$post_content}','{$category_id}')";
 	// 添加数据
 	$id  = insert($db,$sql);
 	// if($id){

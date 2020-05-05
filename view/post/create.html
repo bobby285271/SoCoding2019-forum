@@ -41,12 +41,13 @@
                             </div>
                             <div class="input-group mb-3">
                                 
-                                <select class="custom-select d-block" name="cat_name" required="">
+                                <select class="custom-select d-block" name="category_id" required="">
                                     <option value="">选择一个分类...</option>
-                                    <option>C++</option>
+                                    <?php $type=2; include './controller/category/list.php'; ?>
+                                    <!-- <option>C++</option>
                                     <option>Java</option>
                                     <option>PHP</option>
-                                    <option>Python</option>
+                                    <option>Python</option> -->
                                 </select>
                                 <button class="btn btn-info mb-3" type="submit">发布</button>
                             </div>
