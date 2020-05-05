@@ -30,14 +30,11 @@
                     </div>
                     <div class="card-body">
                         <div class="list-group">
-                            <!-- <a href="view.php" class="list-group-item list-group-item-action">基本语法教学</a>
-                            <a href="view.php" class="list-group-item list-group-item-action">算法竞赛入门教程</a>
-                            <a href="view.php" class="list-group-item list-group-item-action">小型项目入门教程</a>
+                            <!-- 
                             <a href="view.php" class="list-group-item list-group-item-action">如何不脱发</a> -->
-                            <!-- <script src="controller/post/list.php"></script> -->
                             <?php include "controller/post/list.php"; ?>
                         </div>
-                        <?php $page = $_GET['page']; $lastpage=$page-1;$nextpage=$page+1; echo "<a href=\"index.php?action=list&page=${lastpage}\">上一页</a> <a href=\"index.php?action=list&page=${nextpage}\">下一页</a>"; ?>
+                        <?php include "controller/post/pager.php"; ?>
                     </div>
                 </div>
             </div>

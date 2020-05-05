@@ -4,15 +4,16 @@
 include './controller/public/function.php';
 
 $page = $_GET['page'];
+if($page < 1) $page=1;
 $category = $_GET['category'];
 
-$page = ($page-1)*10;
+$edgepost = ($page-1)*10;
 
 if($category){
-    $sql = "SELECT * FROM {$postTable} WHERE category_id= {$category} LIMIT {$page},10";
+    $sql = "SELECT * FROM {$postTable} WHERE category_id= {$category} order by id desc LIMIT {$edgepost},10";
 }
 else {
-    $sql = "SELECT * FROM {$postTable} LIMIT {$page},10";
+    $sql = "SELECT * FROM {$postTable} order by id desc LIMIT {$edgepost},10";
 }
 
 $conn = db_connect($db);
