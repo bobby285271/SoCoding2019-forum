@@ -1,6 +1,6 @@
 <?php
 
-include './controller/public/function.php';
+// include './controller/public/function.php';
 
 // session_start();
 // if(isset($_SESSION['user'])){
@@ -11,10 +11,10 @@ include './controller/public/function.php';
 //     echo "</div>";
 // }
 // else{
-    echo "<script>alert(\"test\");</script>";
-    echo "<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbardrop\" data-toggle=\"dropdown\"未登录</a>";
-    echo "<div class=\"dropdown-menu\">";
-    echo "<a class=\"dropdown-item\" href=\"index.php?action=login\" target=\"_top\">登录</a>";
-    echo "<a class=\"dropdown-item\" href=\"index.php?action=register\" target=\"_top\">注册</a>";
-    echo "</div>";
+//     echo "<script>alert(\"test\");</script>";
+//     echo "<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbardrop\" data-toggle=\"dropdown\"未登录</a>";
+//     echo "<div class=\"dropdown-menu\">";
+//     echo "<a class=\"dropdown-item\" href=\"index.php?action=login\" target=\"_top\">登录</a>";
+//     echo "<a class=\"dropdown-item\" href=\"index.php?action=register\" target=\"_top\">注册</a>";
+//     echo "</div>";
 // }
