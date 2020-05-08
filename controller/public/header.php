@@ -21,7 +21,7 @@ if(isset($_SESSION['user'])){
     echo "</div>";
 }
 else{
-    echo "<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbardrop\" data-toggle=\"dropdown\"未登录</a>";
+    echo "<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbardrop\" data-toggle=\"dropdown\">未登录</a>";
     echo "<div class=\"dropdown-menu\">";
     echo "<a class=\"dropdown-item\" href=\"index.php?action=login\" target=\"_top\">登录</a>";
     echo "<a class=\"dropdown-item\" href=\"index.php?action=register\" target=\"_top\">注册</a>";
